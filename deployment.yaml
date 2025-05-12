@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-deploy
+  labels:
+    app: my-dotnet
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-dotnet
+  template:
+    metadata:
+      labels:
+        app: my-dotnet
+    spec:
+      containers:
+        - name: dotnet-cont
+          image: ajjurathod1998/dotnet-core:v1.0.0
+          ports:
+            - containerPort: 80
