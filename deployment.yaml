@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dotnet-deploy
+  name: core-dotnet-deploy
   labels:
     app: my-dotnet
 spec:
@@ -15,7 +15,7 @@ spec:
         app: my-dotnet
     spec:
       containers:
-        - name: dotnet-cont
+        - name: core-dotnet-cont
           image: ajjurathod1998/dotnet-core:v1.0.0
           ports:
             - containerPort: 80
