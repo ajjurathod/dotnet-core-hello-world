@@ -7,4 +7,5 @@ RUN dotnet publish -c Release -o out
 
 # Set working directory and run the app
 WORKDIR /app/out
+ENV ASPNETCORE_URLS=http://+:80
 ENTRYPOINT ["dotnet", "dotnet-core-hello-world.dll"]
