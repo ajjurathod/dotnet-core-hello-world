@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: core-dotnet-cont
-          image: ajjurathod1998/dotnet-core:v1.0.0
+          image: ajjurathod1998/dotnet1-core:v1.0.0
           ports:
             - containerPort: 5000
           env:
